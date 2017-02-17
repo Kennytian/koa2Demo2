@@ -1,6 +1,10 @@
 import Koa from 'koa';
+import logger from './logger';
 
 const app = new Koa();
+
+app.use(logger());
+app.use(logger(':method :url'));
 
 app.use((ctx, next) => {
   const start = new Date;
@@ -21,10 +25,12 @@ app.use(async(ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-app.use(ctx=>{
+app.use(ctx => {
   console.log('app 3');
   ctx.body = '你好，Koa2';
 });
+
+
 
 app.listen(3000);
 
