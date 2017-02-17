@@ -1,0 +1,25 @@
+{
+  "name": "koa2demo2",
+  "version": "1.0.0",
+  "description": "koa2 demo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa2"
+  ],
+  "author": "Kenny Tian",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "koa": "^2.0.0-alpha.8",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-3": "^6.22.0"
+  }
+}
