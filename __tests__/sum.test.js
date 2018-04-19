@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { sum } from './sum';
 
 describe('number operators', () => {
