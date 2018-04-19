@@ -15,7 +15,7 @@ app.use((ctx, next) => {
   return next().then(() => {
     const ms = new Date() - start;
     console.log('app 1 callback');
-    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+    console.log(`app 1-${ctx.method} ${ctx.url} - ${ms}ms`);
   });
 });
 
@@ -25,7 +25,7 @@ app.use(async (ctx, next) => {
   await next();
   const ms = new Date() - start;
   console.log('app 2 callback');
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+  console.log(`app 2-${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
 app.use((ctx) => {
